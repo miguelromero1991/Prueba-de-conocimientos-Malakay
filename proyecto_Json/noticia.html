@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Informacion del mundo</title>
+  </head>
+  <body>
+    <h1>Noticias del mundo</h1>
+    <ul id="news"></ul>
+    <script>
+      var news = [
+      {author: "Escrito por", autor:"Omkar Godbole"},
+      ];
+      var tit = [
+      {title: "", titulos:" Bitcoin Remains on Hunt for $10K as Holding Sentiment Gains Strength"},
+      ];
+      var texto = [
+      {description: "", parrafo: " There are signs investors are increasingly holding bitcoin, confident that a long-term bull market lies ahead."},
+      ];
+      var link1 = [
+      {url: "", enlace: " https://finance.yahoo.com/news/bitcoin-remains-hunt-10k-holding-122329739.html"},
+      ];
+      var link_image = [
+      {urlToImage: "", imagen: " https://s.yimg.com/ny/api/res/1.2/CkuSU0zPJh6wqJAiakTHWA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyODA7aD04MDkuNg--/https://s.yimg.com/uu/api/res/1.2/82rHY4U6JzhcE.Se5thehA--~B/aD03NTk7dz0xMjAwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en-US/coindesk_75/e9cf1ab59c285b74c2bd6eeafede7cd5"},
+      ];
+      var date = [
+      {publishedAt: "", fecha: "2020-06-08T12:23:29Z"},
+      ];
+      var texto2 = [
+      {content: "", contenido: " Theres a disconnect between crypto markets and Wall Street. \r\nAmong bitcoin bulls, a key investment thesis is that the trillions of dollars of money injections by global central banks will usher in a… [+6714 chars]"},
+      ];
+
+      var salida = '';
+      for (var i = 0; i <news.length; i++) {
+      salida += `<li>${news[i].author} el autor ${news[i].autor}</li><li>${tit[i].title} El título es: ${tit[i].titulos}</li><li>${texto[i].description} Su descripción es: ${texto[i].parrafo}</li><li>${link1[i].url} El hipervinculo es: ${link1[i].enlace}</li><li>${link_image[i].urlToImage} el enlace de la imagen es:${link_image[i].imagen}</li><li>${date[i].publishedAt} La fecha es:${date[i].fecha}</li><li>${texto2[i].content} Su contenido es: ${texto2[i].contenido}</li>`;
+      }
+      document.getElementById('news').innerHTML = salida;
+
+    </script>
+    <h1>Información sobre el el estado del tiempo de la ciudad</h1>
+    <ul id="times"></ul>
+    <script>
+    var times = [
+    {current_weather: "", climas: "28°C"},
+    ];
+    var times1 = [
+    {observation_time: "", tiempos: "12:14 PM"},
+    ];
+    var temp = [
+    {temperature: "", temperaturas: "13"},
+    ];
+    var desc_meteor = [
+    {weather_descriptions: "", meteorologicas: " Actualmente el clima en la ciudad está soleado, no se han presentado lluvias en los últimos 3 meses, su temperatura oscila entre los 28 a 35°C."},
+    ];
+    var salida1 = '';
+    for (var i = 0; i <times.length; i++) {
+    salida1 += `<li>${times[i].current_weather} el clima actual de la ciudad es de ${times[i].climas}</li><li>${times1[i].observation_time} La hora actual de la ciudad es: ${times1[i].tiempos}</li><li>${temp[i].temperature} La temperatura es: ${temp[i].temperaturas}</li><li>${desc_meteor[i].weather_descriptions} Descripciones meteorologicas: ${desc_meteor[i].meteorologicas}</li>`;
+    }
+    document.getElementById('times').innerHTML = salida1;
+    </script>
+    <h1>Por último se tiene la ciudad registrada</h1>
+    <ul id="ciudad"></ul>
+    <script>
+    var ciudad = [
+    {city: "", ciudades: "New York"},
+    ];
+    var salida1 = '';
+    for (var i = 0; i <times.length; i++) {
+    salida1 += `<li>${ciudad[i].city} La ciudad reportada es: ${ciudad[i].ciudades}</li>`
+    }
+    document.getElementById('ciudad').innerHTML = salida1;
+    </script>
+  </body>
+</html>
